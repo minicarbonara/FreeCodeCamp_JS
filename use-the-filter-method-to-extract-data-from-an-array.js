@@ -114,8 +114,8 @@ var watchList = [
 
 // Only change code below this line
 
-var filteredList = watchList.map( item => ({"title":item["Title"], "rating":item["imdbRating"]}));
-filteredList = filteredList.filter(item => item["rating"]>=8);
+var filteredList = watchList.map(item => ({ "title": item["Title"], "rating": item["imdbRating"] }));
+filteredList = filteredList.filter(item => item["rating"] >= 8);
 
 // Only change code above this line
 

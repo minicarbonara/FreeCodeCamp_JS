@@ -3,8 +3,8 @@ function whatIsInAName(collection, source) {
   // Only change code below this line
   arr = collection.filter(function (item) {
     var isit = true;
-    for (var prop in source){
-       if(item[prop] != source[prop]) isit = false;
+    for (var prop in source) {
+      if (item[prop] != source[prop]) isit = false;
     }
     return isit;
   });
