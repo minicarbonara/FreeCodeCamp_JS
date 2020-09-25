@@ -3,7 +3,7 @@ function convertToRoman(num) {
   var romanString = "";
   var arabicNum = num;
 
-  for (var i = 1; i <= Math.floor(arabicNum/1000); i++) {
+  for (var i = 1; i <= Math.floor(arabicNum / 1000); i++) {
     romanArray.push("M"); //tantas M como millares completos
   }
   arabicNum = arabicNum % 1000; //quitamos los millares
@@ -16,14 +16,14 @@ function convertToRoman(num) {
   if (arabicNum >= 500) {
     romanArray.push("D");
     arabicNum -= 500;
-  } 
+  }
 
   if (arabicNum >= 400) {
     romanArray.push("CD");
     arabicNum -= 400;
-  } 
+  }
 
-  for (var i = 1; i <= Math.floor(arabicNum/100); i++) {
+  for (var i = 1; i <= Math.floor(arabicNum / 100); i++) {
     romanArray.push("C"); //tantas C como centenas restantes
   }
   arabicNum = arabicNum % 100; //quitamos las centenas
@@ -41,9 +41,9 @@ function convertToRoman(num) {
   if (arabicNum >= 40) {
     romanArray.push("XL");
     arabicNum -= 40;
-  }  
+  }
 
-  for (var i = 1; i <= Math.floor(arabicNum/10); i++) {
+  for (var i = 1; i <= Math.floor(arabicNum / 10); i++) {
     romanArray.push("X"); //tantas X como decenas restantes
   }
   arabicNum = arabicNum % 10; //quitamos las decenas
@@ -56,12 +56,12 @@ function convertToRoman(num) {
   if (arabicNum >= 5) {
     romanArray.push("V");
     arabicNum -= 5;
-  } 
+  }
 
   if (arabicNum >= 4) {
     romanArray.push("IV");
     arabicNum -= 4;
-  } 
+  }
 
   for (var i = 1; i <= arabicNum; i++) {
     romanArray.push("I"); //tantas I como unidades restantes

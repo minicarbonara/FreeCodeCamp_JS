@@ -1,14 +1,14 @@
 function rot13(original) {
-  
+
   var origArray = original.split("");
   //console.log(origArray);
 
-  var decodedArray = origArray.map(function(character){
-    if(character.match(/[A-M]/)){
+  var decodedArray = origArray.map(function (character) {
+    if (character.match(/[A-M]/)) {
       //console.log(character);
       return String.fromCharCode(character.charCodeAt(0) + 13);
     }
-    if(character.match(/[N-Z]/)){
+    if (character.match(/[N-Z]/)) {
       //console.log(character);
       return String.fromCharCode(character.charCodeAt(0) - 13);
     }

@@ -2,12 +2,12 @@ function telephoneCheck(str) {
   if (str.match(/\d/g).length < 10) return false; //número corto
   if (str.match(/\d/g).length > 11) return false; //número largo
   if (str.match(/\d/g).length == 11 && !str.match(/^1\b/)) return false; //código de país distinto de 1
-  if (str.match(/\([^\)]*$/))return false; //paréntesis sin cerrar
+  if (str.match(/\([^\)]*$/)) return false; //paréntesis sin cerrar
   if (str.match(/^[^\(]*\)/)) return false; //paréntesis sin abrir
 
   var phoneRegEx = /^1*?[(\s]*\d\d\d[)-\s]*\d\d\d[-\s]*\d\d\d\d$/;
   return phoneRegEx.test(str);
-  
+
 }
 
 console.log(telephoneCheck("555-555-5555"));

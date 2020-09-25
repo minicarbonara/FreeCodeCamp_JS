@@ -1,9 +1,10 @@
 function factorialize(num) { //OPCIÓN 1: CALCULAR FACTORIAL
-  if (num < 0) 
-        return -1;
+  if (num < 0)
+    return -1;
   else if (num == 0) { return 1; }
-        else { return (num * factorialize(num - 1));
-    }
+  else {
+    return (num * factorialize(num - 1));
+  }
 }
 
 // OPCIÓN 2: PRECARGARLOS EN UN ARRAY PARA REDUCIR CÁLCULOS
@@ -12,8 +13,8 @@ var chuletaFactoriales = [0, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800
 function smallestCommons(arr) {
   var max = Math.max(arr[0], arr[1]);
   var min = Math.min(arr[0], arr[1]);
-  if (min==max) { return max; } //porsiaca
-  
+  if (min == max) { return max; } //porsiaca
+
   /* console.log("Valor más alto: " + max);
   console.log("Factorial: " + chuletaFactoriales[max]);
   console.log("Valor más bajo: " + min);
@@ -22,15 +23,15 @@ function smallestCommons(arr) {
   var multiplo = 7000000; //realmente sería max! / min!
   //var multiplo = chuletaFactoriales[max] / chuletaFactoriales[min];
 
-for (var i = min * max; i < multiplo && i > 1; i += max*min){
-  for ( var j = min; j <= max; j++){
-    if (i % j != 0){ j = max + 1; } //si no es divisor, rompe
-    if (j == max) { return i;} //si completa el bucle, devuelve
+  for (var i = min * max; i < multiplo && i > 1; i += max * min) {
+    for (var j = min; j <= max; j++) {
+      if (i % j != 0) { j = max + 1; } //si no es divisor, rompe
+      if (j == max) { return i; } //si completa el bucle, devuelve
+    }
   }
-}
 
   return -1; //si algo ha ido mal, -1 para señalar error
 }
 
 
-console.log(smallestCommons([1,13]));
+console.log(smallestCommons([1, 13]));

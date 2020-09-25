@@ -3,10 +3,10 @@ function orbitalPeriod(arr) {
   var earthRadius = 6367.4447;
   var newArray = [];
 
-  newArray = arr.map(function(object) {
+  newArray = arr.map(function (object) {
     var newObject = {
-      name : object.name,
-      orbitalPeriod : Math.round(2 * Math.PI * Math.sqrt(Math.pow(earthRadius+object.avgAlt, 3)/GM))
+      name: object.name,
+      orbitalPeriod: Math.round(2 * Math.PI * Math.sqrt(Math.pow(earthRadius + object.avgAlt, 3) / GM))
     };
     return newObject;
   });
@@ -19,4 +19,4 @@ function orbitalPeriod(arr) {
   return newArray;
 }
 
-console.log(orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]));
+console.log(orbitalPeriod([{ name: "sputnik", avgAlt: 35873.5553 }]));

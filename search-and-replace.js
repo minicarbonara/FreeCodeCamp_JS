@@ -4,23 +4,23 @@ function myReplace(str, before, after) {
 
   //console.log(beforeRegEx);
 
-  if (beforeRegEx.test(newString)){ //solo si está la palabra origen
+  if (beforeRegEx.test(newString)) { //solo si está la palabra origen
     //console.log("Word found");
     var afterMinus = after;
     afterMinus = afterMinus.toLowerCase(); //reemplazo en mínus
 
     var wordString = newString.split(" ");
-    for (var i = 0; i < wordString.length; i++){
+    for (var i = 0; i < wordString.length; i++) {
       var mayusRegEx = /^[A-Z]/; //RegEx mayúscula inicial
       var mayus = mayusRegEx.test(wordString[i]); //máyus inicial?
-      
+
       //wordString[i].replace(beforeRegEx, afterMinus); //sustituir
       if (beforeRegEx.test(wordString[i])) {
         //console.log("te pillé");
         wordString[i] = afterMinus;
       }
 
-      if (mayus){ //si palabra original en máyus, capitalizar
+      if (mayus) { //si palabra original en máyus, capitalizar
         //console.log("Uppercase initial")
         wordString[i] = wordString[i][0].toUpperCase() + wordString[i].substr(1);
       } //fin if máyus

@@ -2,7 +2,7 @@ function binaryAgent(str) {
   var translatedString = "";
   var charArray = str.split(" ");
 
-  for (var i = 0; i < charArray.length; i++){
+  for (var i = 0; i < charArray.length; i++) {
     var binary = parseInt(charArray[i], 2);
     charArray[i] = String.fromCharCode(binary);
   }

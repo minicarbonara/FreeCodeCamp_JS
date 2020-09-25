@@ -10,7 +10,7 @@ function translatePigLatin(str) {
     return pigString + "way";
   }
 
-  pigString = pigString.replace(/^([b-df-hj-np-tv-z]*)(\w*)/, "$2"+"$1"+"ay");
+  pigString = pigString.replace(/^([b-df-hj-np-tv-z]*)(\w*)/, "$2" + "$1" + "ay");
   console.log(pigString);
   return pigString;
 }

@@ -1,10 +1,10 @@
 function uniteUnique(arr) {
   var combined = [];
 
-  for (var i = 0; i < arguments.length; i++){
-    for (var j = 0; j < arguments[i].length; j++){
+  for (var i = 0; i < arguments.length; i++) {
+    for (var j = 0; j < arguments[i].length; j++) {
       // console.log(arguments[i][j]);
-      if (combined.indexOf(arguments[i][j]) < 0){
+      if (combined.indexOf(arguments[i][j]) < 0) {
         combined.push(arguments[i][j]);
       }
     }

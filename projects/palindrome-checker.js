@@ -8,7 +8,7 @@ function palindrome(str) {
   console.log(cleanArray);
   cleanString = cleanArray.join("");
 
-  for (var i = 0; i < cleanString.length/2; i++) {
+  for (var i = 0; i < cleanString.length / 2; i++) {
     if (cleanString[i] != cleanString[cleanString.length - 1 - i]) isItPalindrome = false;
   }
   return isItPalindrome;

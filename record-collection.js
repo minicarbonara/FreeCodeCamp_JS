@@ -18,7 +18,7 @@ var collection = {
   },
   1245: {
     artist: "Robert Palmer",
-    tracks: [ ]
+    tracks: []
   },
   5439: {
     album: "ABBA Gold"
@@ -28,21 +28,22 @@ var collection = {
 // Only change code below this line
 function updateRecords(id, prop, value) {
   var record = collection[id];
-  if (value == ""){ //property deletion
-    if (record.hasOwnProperty(prop)){
+  if (value == "") { //property deletion
+    if (record.hasOwnProperty(prop)) {
       delete record[prop];
-      return collection;} //retur bc no need to check the rest
+      return collection;
+    } //retur bc no need to check the rest
   } //end property deletion
 
-  if (prop=="tracks"){ //tracks update
+  if (prop == "tracks") { //tracks update
     if (!record.hasOwnProperty("tracks")) { //in case there's no tracks property
-        record.tracks=[];
+      record.tracks = [];
     }
     record.tracks.push(value);
   } //end track update
 
-    else { //artist or album update
-    record[prop]=value;
+  else { //artist or album update
+    record[prop] = value;
   } //end artist update
 
   return collection;

@@ -2,20 +2,20 @@ var flatArray = [];
 
 function steamrollArray(arr) {
 
-  if (Array.isArray(arr)){ //si arr ES un array
+  if (Array.isArray(arr)) { //si arr ES un array
     var newArray = [];
-    for (var i=0; i<arr.length; i++){
+    for (var i = 0; i < arr.length; i++) {
       newArray.push(...steamrollArray(arr[i]));
     }
     return (newArray);
 
   } else { return [arr]; } //si es un valor suelto, devuelve el valor
-  
+
 }
 var num = 1;
 var booleano = true;
 var string = "patata";
-var objeto = { clave: "valor"};
+var objeto = { clave: "valor" };
 var array = [];
 
 //console.log(objeto[0]);

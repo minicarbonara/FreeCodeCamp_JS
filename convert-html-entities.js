@@ -1,7 +1,7 @@
 function convertHTML(str) {
   var charArray = str.split("");
-  for (var i = 0; i < charArray.length; i++){
-    switch (charArray[i]){
+  for (var i = 0; i < charArray.length; i++) {
+    switch (charArray[i]) {
       case "&":
         charArray[i] = "&amp;";
         break;

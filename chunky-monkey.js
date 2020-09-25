@@ -13,7 +13,7 @@ function chunkArrayInGroups(arr, size) {
       newRow.push(arr[i]);
       i++;
       j++;
-    } while ((i)%size != 0 && j < arr.length)
+    } while ((i) % size != 0 && j < arr.length)
     newArray.push(newRow);
     newRow = [];
   } while (j < arr.length);

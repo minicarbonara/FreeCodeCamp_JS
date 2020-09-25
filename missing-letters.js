@@ -4,15 +4,15 @@ function fearNotLetter(str) {
   var stringArray = str.split("");
   //console.log(stringArray);
 
-  for (var i = 0; i < stringArray.length-1; i++){ //recorre alfabéricamente la string
+  for (var i = 0; i < stringArray.length - 1; i++) { //recorre alfabéricamente la string
     console.log(stringArray[i] + ": " + stringArray[i].charCodeAt(0));
-    if ((stringArray[i+1].charCodeAt(0) - stringArray[i].charCodeAt(0)) > 1) {
-      missing = String.fromCharCode(stringArray[i].charCodeAt(0)+1);
+    if ((stringArray[i + 1].charCodeAt(0) - stringArray[i].charCodeAt(0)) > 1) {
+      missing = String.fromCharCode(stringArray[i].charCodeAt(0) + 1);
       console.log(missing);
       return missing;
     }
   }
-  
+
   console.log(missing);
   return missing;
 }
